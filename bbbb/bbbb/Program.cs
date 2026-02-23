@@ -16,17 +16,21 @@
                 }
                 else if(command == "Distinct")
                 {
-                    string[] unique = a.Distinct();
-                    string[] a = unique;
+                    a = a.Distinct().ToArray();
                 }
                 else if(command == "Replace")
                 {
-                    int index = int.Parse(Console.ReadLine());
-                    string rep = Console.ReadLine();
-                    a[index] = $"{rep}";
+                    string[] aa = Console.ReadLine().Split();
+                    int index = int.Parse(aa[0]);
+                    string rep = aa[1];
+                    if (index >= 0 && index < a.Length)
+                    {
+                        a[index] = rep;
+                    }
                 }
             }
-            Console.WriteLine(a);
+            Console.WriteLine(string.Join(" ", a));
         }
     }
 }
+    
