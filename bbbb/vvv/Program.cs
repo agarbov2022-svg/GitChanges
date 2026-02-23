@@ -24,16 +24,16 @@
                 {
                     if (command.Length != 3)
                     {
-                        Console.WriteLine("Невалидна команда!");
+                        Console.WriteLine("Invalid command!");
                         continue;
                     }
 
                     int index;
-                    bool isValidIndex = int.TryParse(command[1], out index);
+                    bool isNumber = int.TryParse(command[1], out index);
 
-                    if (!isValidIndex || index < 0 || index >= array.Length)
+                    if (!isNumber || index < 0 || index >= array.Length)
                     {
-                        Console.WriteLine("Невалиден вход!");
+                        Console.WriteLine("Invalid input!");
                         continue;
                     }
 
@@ -41,7 +41,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Невалидна команда!");
+                    Console.WriteLine("Invalid command!");
                 }
             }
 
